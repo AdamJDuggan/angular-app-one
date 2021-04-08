@@ -30,4 +30,8 @@ export class PostService {
     const url = `${this.postUrl}/${id}`;
     return this.http.delete<Post>(url, this.httpOptions);
   }
+  getPost(id: number): Observable<Post> {
+    const url = `${this.postUrl}/${id}`;
+    return this.http.get<Post>(url);
+  }
 }

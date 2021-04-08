@@ -12,6 +12,10 @@ import { PostsComponent } from './components/posts/posts.component';
 import { UsersService } from './services/users.service';
 import { PostService } from './services/post.service';
 import { PostFormComponent } from './components/post-form/post-form.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { PostComponent } from './components/post/post.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +25,11 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     NavbarComponent,
     PostsComponent,
     PostFormComponent,
+    HomeComponent,
+    PostComponent,
+    NotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [UsersService, PostService],
   bootstrap: [AppComponent],
 })
